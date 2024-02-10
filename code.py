@@ -20,6 +20,6 @@ GYRO = adafruit_l3gd20.L3GD20_I2C(I2C)
 while True:
     led.value = not led.value
     print(led.value)
-    print("Acceleration (m/s^2): X=%0.3f Y=%0.3f Z=%0.3f"%ACCEL.acceleration)
-    print("Gyro (rad/s): X=%0.3f Y=%0.3f Z=%0.3f"%GYRO.gyro)
+    print('Angular momentum (rad/s): {}'.format(GYRO.gyro))
+    print('Acceleration (m/s^2): {}'.format(ACCEL.acceleration))
     sleep(0.5)
